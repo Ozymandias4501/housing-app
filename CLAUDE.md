@@ -10,6 +10,10 @@ that a real team would reject in review.
 - Never commit or push to main. All changes merge via PR.
 - One issue = one PR. Keep PRs small and reviewable.
 - PR descriptions must link the issue with "Closes #N".
+- Before merging a PR (`gh pr merge`), run `gh pr view <N> --json commits` and compare it
+  against the commits made in this session. If any commit is present that wasn't authored in
+  this session, summarize what it changed and why before merging — don't merge past unreviewed
+  changes silently.
 - Commit as you go, conventional commits: feat:, fix:, chore:, docs:, test:
 
 ## Tech
