@@ -8,3 +8,26 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Secrets and local config
+.env
+.env.*
+
+# Data and model artifacts (regenerate via pipeline; never commit)
+data/
+models/
+*.parquet
+*.csv
+*.pkl
+*.joblib
+*.pt
+*.onnx
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Notebooks and OS noise
+.ipynb_checkpoints/
+.DS_Store
