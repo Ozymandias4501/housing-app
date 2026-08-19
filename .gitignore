@@ -12,6 +12,7 @@ wheels/
 # Secrets and local config
 .env
 .env.*
+!.env.example
 
 # Data and model artifacts (regenerate via pipeline; never commit)
 data/
