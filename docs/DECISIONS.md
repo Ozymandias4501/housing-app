@@ -9,6 +9,7 @@ Index of decision records. One file per non-obvious decision, in
 | [0002](decisions/0002-ruff-rule-set.md) | 2026-08-19 | ruff at line length 100, rules E/F/I/UP/B | Accepted |
 | [0003](decisions/0003-pre-merge-drift-check.md) | 2026-08-19 | check a PR's commit list for drift before merging | Accepted |
 | [0004](decisions/0004-architecture-doc-set.md) | 2026-08-19 | architecture, state, and decisions in three separate docs | Accepted |
+| [0005](decisions/0005-ci-runs-uv-natively.md) | 2026-08-19 | CI installs uv and takes the Python pin from `.python-version` | Accepted |
 
 ## Writing a new one
 

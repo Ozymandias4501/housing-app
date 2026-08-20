@@ -51,8 +51,9 @@ where "what the system knows" is defined.
   currently just a version string
 - `tests/` — pytest suite, currently a single import smoke test
 - Tooling — ruff and pytest via uv (see [ADR 0002](docs/decisions/0002-ruff-rule-set.md))
-- Automation — two GitHub Actions workflows that run Claude Code on `@claude`
-  mentions and on pull requests; no application CI (tests/lint) yet
+- Automation — CI runs ruff and pytest on every pull request and on pushes to
+  `main` (see [ADR 0005](docs/decisions/0005-ci-runs-uv-natively.md)); two further
+  GitHub Actions workflows run Claude Code on `@claude` mentions and on pull requests
 
 ## Open questions
 
