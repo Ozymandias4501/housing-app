@@ -1,16 +1,28 @@
 # Architecture decisions
 
-One bullet per structural choice: date · decision · alternative rejected · why.
+Index of decision records. One file per non-obvious decision, in
+[`docs/decisions/`](decisions/) — numbered, dated, and immutable once merged.
 
-- 2026-08-19 · src layout with an installable package (`src/housing/`, hatchling
-  build backend) · rejected pytest `pythonpath = ["src"]` config · installing the
-  package editable via `uv sync` lets tests and future API/pipeline code
-  `import housing` without path hacks, and keeps the project publishable.
-- 2026-08-19 · ruff rule set `E, F, I, UP, B` at line length 100 · rejected
-  default-only `E, F` · import sorting (I), pyupgrade (UP), and bugbear (B) catch
-  real issues cheaply without the churn of an exhaustive rule set.
-- 2026-08-19 · pre-merge commit-drift check (`gh pr view <N> --json commits`) required
-  in CLAUDE.md/CONTRIBUTING.md before running `gh pr merge` · rejected a script/CI
-  check enforcing it · a follow-up PR (#4) merged into an open PR's (#2) branch went
-  unnoticed until after merge; only the merging session's own context knows which
-  commits it already reviewed, so a script can't add anything a manual check can't.
+| ADR | Date | Decision | Status |
+| --- | --- | --- | --- |
+| [0001](decisions/0001-src-layout.md) | 2026-08-19 | src layout with an installable package | Accepted |
+| [0002](decisions/0002-ruff-rule-set.md) | 2026-08-19 | ruff at line length 100, rules E/F/I/UP/B | Accepted |
+| [0003](decisions/0003-pre-merge-drift-check.md) | 2026-08-19 | check a PR's commit list for drift before merging | Accepted |
+
+## Writing a new one
+
+Copy [`decisions/TEMPLATE.md`](decisions/TEMPLATE.md) to
+`decisions/NNNN-short-title.md` using the next free number, fill it in, and add
+a row above — in the same PR as the change it describes.
+
+Write one whenever a choice had a reasonable alternative: a library, a storage
+engine, a schema shape, a workflow rule. Routine choices that any reviewer would
+have made the same way don't need one.
+
+## Immutability
+
+A merged ADR's body is never edited — it's a record of what was decided and why,
+at a point in time, and rewriting it destroys the only thing it's for. When a
+decision changes, write a new ADR that supersedes it. The only line that may
+change on the old one is its status, which becomes `Superseded by NNNN`; update
+its row here to match.
