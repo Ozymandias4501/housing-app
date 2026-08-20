@@ -6,7 +6,7 @@ that a real team would reject in review.
 
 ## Workflow (non-negotiable)
 - All work starts from a GitHub issue. No issue, no branch.
-- Branch naming: `feature/, bug/, /chore then <issue-number>-short-description` (e.g. `feature/12-add-listing-schema`)
+- Branch naming: Branch naming: <type>/<issue-number>-short-description where type is feature, bug, or chore
 - Never commit or push to main. All changes merge via PR.
 - One issue = one PR. Keep PRs small and reviewable.
 - PR descriptions must link the issue with "Closes #N".
