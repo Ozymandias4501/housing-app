@@ -32,6 +32,11 @@ characters; the body explains *why*, not what.
 - `uv run pytest` passes
 - `uv run ruff check .` passes
 - README or docs updated if behaviour changed
+- `ARCHITECTURE.md` updated if the change altered the system's shape (component
+  added/removed/renamed, data flow changed, something moved from planned to built)
+- `STATE.md` reflects reality after the merge, with its date refreshed
+- An ADR added under `docs/decisions/` if the change involved a choice with a
+  reasonable alternative, and indexed in `docs/DECISIONS.md`
 - No secrets, data files, or model artifacts in the diff
 
 ## Ground rules

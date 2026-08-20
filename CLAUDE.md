@@ -16,6 +16,17 @@ that a real team would reject in review.
   changes silently.
 - Commit as you go, conventional commits: feat:, fix:, chore:, docs:, test:
 
+## Docs (keep current, in the same PR as the change)
+- `ARCHITECTURE.md` — update when a PR changes the shape of the system: a component added,
+  removed, or renamed; a change in how data flows; something moving from planned to built.
+- `STATE.md` — update in every PR that changes what's done, in flight, blocked, or next.
+  Keep it to ten lines and refresh the "Last updated" date.
+- `docs/decisions/NNNN-*.md` — add an ADR whenever a choice had a reasonable alternative
+  (library, storage engine, schema shape, workflow rule). Copy `docs/decisions/TEMPLATE.md`,
+  take the next number, and add a row to the `docs/DECISIONS.md` index.
+- Never edit a merged ADR's body. To change a decision, write a new ADR and set the old one's
+  status to `Superseded by NNNN`.
+
 ## Tech
 - Python managed with uv. Add deps with `uv add`, never pip.
 - Run tests: `uv run pytest`

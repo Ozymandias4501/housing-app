@@ -8,6 +8,7 @@ Index of decision records. One file per non-obvious decision, in
 | [0001](decisions/0001-src-layout.md) | 2026-08-19 | src layout with an installable package | Accepted |
 | [0002](decisions/0002-ruff-rule-set.md) | 2026-08-19 | ruff at line length 100, rules E/F/I/UP/B | Accepted |
 | [0003](decisions/0003-pre-merge-drift-check.md) | 2026-08-19 | check a PR's commit list for drift before merging | Accepted |
+| [0004](decisions/0004-architecture-doc-set.md) | 2026-08-19 | architecture, state, and decisions in three separate docs | Accepted |
 
 ## Writing a new one
 

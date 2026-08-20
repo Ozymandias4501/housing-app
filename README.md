@@ -11,6 +11,15 @@ analysis-ready datasets. ML models train on those datasets to produce price and
 trend predictions. An API serves the predictions and aggregate statistics. A
 frontend dashboard consumes the API to visualize the market.
 
+Nothing beyond scaffolding is built yet, and most technology choices are still
+open — [ARCHITECTURE.md](ARCHITECTURE.md) has the component-by-component detail.
+
+## Project docs
+
+- [ARCHITECTURE.md](ARCHITECTURE.md) — components, data flow, built vs planned
+- [STATE.md](STATE.md) — current phase, what's in flight, what's next
+- [docs/DECISIONS.md](docs/DECISIONS.md) — index of decision records (ADRs)
+
 ## Local setup
 
 Requires [uv](https://docs.astral.sh/uv/) and Python 3.13 (uv will fetch it if missing).
