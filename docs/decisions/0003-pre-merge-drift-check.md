@@ -1,7 +1,7 @@
 # 0003 — Check a PR's commit list for drift before merging
 
 - **Date:** 2026-08-19
-- **Status:** Accepted
+- **Status:** Superseded by [0006](0006-pre-merge-commit-description-check.md)
 
 ## Context
 

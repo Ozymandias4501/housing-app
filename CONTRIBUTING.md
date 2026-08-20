@@ -15,9 +15,11 @@ non-negotiable.
    changes + testing note).
 4. **Review** — PRs are reviewed before merge. Fix findings on the same branch.
 5. **Merge** — merge only when acceptance criteria are met and checks pass,
-   then delete the branch. Before merging, re-check the PR's commit list for anything
-   added since it was opened or last reviewed (`gh pr view <N> --json commits`) and
-   call it out — a PR branch can pick up commits from a later PR targeting it.
+   then delete the branch. Before merging, check the PR's commit list
+   (`gh pr view <N> --json commits`) against what the description and its comments
+   describe, and summarize anything they don't cover in a PR comment first. Two ways
+   a commit goes undescribed: the branch picks up work from a later PR targeting it,
+   or you push fixes after writing the description. Both leave the same hole.
 
 ## Commits
 

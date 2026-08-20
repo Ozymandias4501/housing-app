@@ -17,3 +17,11 @@ rubber-stamped tick. -->
 - [ ] `ARCHITECTURE.md` updated — or: no change to the system's shape
 - [ ] `STATE.md` reflects reality after this merge
 - [ ] ADR added under `docs/decisions/` and indexed — or: no non-obvious decision made
+
+## Before merging
+
+<!-- Commits pushed after this description was written are the common case, not
+the exception. Summarize them in a comment rather than editing this box. -->
+
+- [ ] `gh pr view <N> --json commits` checked against this description and the
+      comments below — every commit is described somewhere a reader can find
