@@ -6,7 +6,8 @@ blocked, or next** — if it's stale it's worse than nothing.
 - **Last updated:** 2026-08-19
 - **Phase:** 0 — scaffolding. No application code written yet.
 - **Done:** repo scaffolding, tooling, and contributor docs (#1); pre-merge
-  commit-drift check (#5); architecture docs (#7).
+  commit-drift check (#5); architecture docs (#7); CI running ruff and pytest
+  on every PR (#10).
 - **In flight:** nothing.
 - **Blocked:** nothing.
 - **Next:** decide the data sources and the storage engine — the two choices
