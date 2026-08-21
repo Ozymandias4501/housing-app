@@ -18,9 +18,10 @@ Copy [`decisions/TEMPLATE.md`](decisions/TEMPLATE.md) to
 `decisions/NNNN-short-title.md` using the next free number, fill it in, and add
 a row above — in the same PR as the change it describes.
 
-Write one whenever a choice had a reasonable alternative: a library, a storage
-engine, a schema shape, a workflow rule. Routine choices that any reviewer would
-have made the same way don't need one.
+Write one only when a decision constrains future work and would be expensive to
+reverse: a storage engine, a data source, a schema shape, a load-bearing
+external dependency. Tooling defaults, formatting, and documentation-process
+choices don't get one — put that reasoning in the issue instead.
 
 ## Immutability
 

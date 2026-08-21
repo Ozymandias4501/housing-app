@@ -5,11 +5,19 @@ Solo project. Primary goals: learn data engineering and MLOps properly. No short
 that a real team would reject in review.
 
 ## Workflow (non-negotiable)
-- All work starts from a GitHub issue. No issue, no branch.
-- Branch naming: Branch naming: <type>/<issue-number>-short-description where type is feature, bug, or chore
+- All work starts from a GitHub issue. No issue, no branch. Exception: the fast path below.
+- Fast path (no issue needed): the change touches only docs or config text, makes no
+  behaviour change, touches nothing in `src/`, `tests/`, or `.github/workflows/`, and is one
+  commit. The PR description must still state, in one sentence, what changed and why. If that
+  explanation runs past one sentence, or the change involves a judgement call, stop and open
+  an issue instead — use the normal flow.
+- Branch naming: `<type>/<issue-number>-short-description` where type is feature, bug, or
+  chore (e.g. `feature/12-add-listing-schema`). Fast-path branches drop the issue number:
+  `<type>/short-description` (e.g. `docs/fix-branch-naming-typo`).
 - Never commit or push to main. All changes merge via PR.
 - One issue = one PR. Keep PRs small and reviewable.
-- PR descriptions must link the issue with "Closes #N".
+- PR descriptions must link the issue with "Closes #N" — fast-path PRs have no issue to link;
+  the one-sentence summary above stands in its place.
 - Before merging a PR (`gh pr merge`), run `gh pr view <N> --json commits` and check the list
   against what the PR description and its comments actually describe. Any commit they don't
   cover — one from another session or author, or one you added yourself after opening the PR —

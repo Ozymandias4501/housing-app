@@ -1,8 +1,11 @@
 Closes #
+<!-- Fast-path PR (docs/config only, no issue)? Delete the line above and
+instead give the one-sentence summary below. -->
 
 ## Summary of changes
 
-<!-- What changed and why, in a few sentences. -->
+<!-- What changed and why, in a few sentences. Fast-path PRs: one sentence
+covers it — if it doesn't, this isn't a fast-path change; open an issue. -->
 
 ## Testing
 
@@ -16,7 +19,8 @@ rubber-stamped tick. -->
 
 - [ ] `ARCHITECTURE.md` updated — or: no change to the system's shape
 - [ ] `STATE.md` reflects reality after this merge
-- [ ] ADR added under `docs/decisions/` and indexed — or: no non-obvious decision made
+- [ ] ADR added under `docs/decisions/` and indexed — required only if this change
+      constrains future work and would be expensive to reverse; otherwise, no ADR needed
 
 ## Before merging
 
