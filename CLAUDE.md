@@ -23,11 +23,18 @@ that a real team would reject in review.
   removed, or renamed; a change in how data flows; something moving from planned to built.
 - `STATE.md` — update in every PR that changes what's done, in flight, blocked, or next.
   Keep it to ten lines and refresh the "Last updated" date.
-- `docs/decisions/NNNN-*.md` — add an ADR whenever a choice had a reasonable alternative
-  (library, storage engine, schema shape, workflow rule). Copy `docs/decisions/TEMPLATE.md`,
-  take the next number, and add a row to the `docs/DECISIONS.md` index.
-- Never edit a merged ADR's body. To change a decision, write a new ADR and set the old one's
-  status to `Superseded by NNNN`.
+- Reasoning for a decision belongs in the GitHub issue by default. That's where the work is
+  scoped and it's read at the start of every session. Don't open a new file for it.
+- `docs/decisions/NNNN-*.md` — write an ADR only when a decision constrains future work and
+  would be expensive to reverse: storage engine, data source, schema shape, external
+  dependency the whole pipeline sits on. If reversing it means editing a config line and
+  moving on, it isn't an ADR. Do not write ADRs about tooling defaults, formatting, or the
+  documentation process itself.
+- If unsure whether something clears the bar, leave it in the issue and ask. A decision can
+  be promoted to an ADR later, once it's clear it mattered.
+- To write one: copy `docs/decisions/TEMPLATE.md`, take the next number, add a row to the
+  `docs/DECISIONS.md` index. To change a past decision, write a new ADR and mark the old one
+  `Superseded by NNNN` rather than rewriting history.
 
 ## Tech
 - Python managed with uv. Add deps with `uv add`, never pip.
